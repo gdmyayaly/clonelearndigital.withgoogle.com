@@ -1,0 +1,73 @@
+<style>
+    .imggrow{
+        background-image: url("assets/growgirls.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        /* background-size: cover; */
+        background-size: 100% 100%;
+    }
+
+</style>
+<app-menu></app-menu>
+<main>
+    <div class="container-fluid">
+        <div class="row description">
+            <div class="col-12 col-md-6 desc">
+                <h1 class="h1">Formez vous aux nouvelles technologies!</h1>
+                <div class="sba_text_content">
+                    <p class="p">
+                        Grâce à la micro tech, chaque fille peut bénéficier d'une formation quelque soit son niveau d'éducation.
+                        De l'initiation au développement web à la réalisation de votre micro application, grow academy vous offre une formation adaptée et flexible.
+                    </p>
+                 
+                </div>
+                <a routerLink="/cours"  class=" boutton btn  my-2 btn-sba">Demarrez</a>  
+            </div>
+            <div class="col-12 col-md-6" id="backgroudimg">
+                <div class="row rt imggrow" *ngIf="play">
+                    <div class="iconplay" (click)="playe()">
+                        <img src="assets/video.svg" class="buttonplay" alt="">
+                    </div>
+                </div>
+                <div class="row rt" *ngIf="!play">
+                    <video id="myVideo" (ended)="fin()" height="100%" width="100%" controls>
+                        <source src="assets/video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <h2 class=" text-center">Trois étapes simples pour développer vos compétences</h2>
+        <div class="etapes row">
+            
+            <div class="col-md-4 etapes-contenu">
+                <img class="etapes-img" src="assets/1.svg" alt="">
+               <div class="etapes-content">
+                <h3 class="etapes-contenu-titre">Choisissez votre formation</h3>
+               <p class="etapes-desc">
+                   Vous voulez vous exercer sur les metiers du numérrique? ALors choisissez maintenant la formation adaptés à vos besoins.</p>
+               </div>
+            </div>
+            <div class=" col-md-4 etapes-contenu">
+                    <img class="etapes-img" src="assets/3.svg" alt="">
+                   <div class="etapes-content">
+                    <h3 class="etapes-contenu-titre">Créez votre programme</h3>
+                   <p class="etapes-desc">
+                       Créez votre programme de formation selon votre rythme sur votre ordinateur, smatphone ou tablette. </p>
+                   </div>
+            </div>
+                <div class=" col-md-4 etapes-contenu">
+                        <img class="etapes-img" src="assets/11.svg" alt="">
+                       <div class="etapes-content">
+                        <h3 class="etapes-contenu-titre">Décrochez votre cértification</h3>
+                       <p class="etapes-desc">
+                           Suivez votre prgression, et décrochez votre certificat officiel qui vous permettra de booster votre CV  </p>
+                       </div>
+                </div>
+           
+        </div>
+    </div>
+</main>

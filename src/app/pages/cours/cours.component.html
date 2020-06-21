@@ -1,0 +1,98 @@
+<app-menu></app-menu>
+<main>
+    <div class="container">
+        <section class="jumbotron">
+            <div class="container">
+                <h1 class="jumbotron-heading">Cours en ligne</h1>
+                <p class="lead">
+                    Découvrez toute une gamme de formations gratuites conçues pour vous aider à développer votre activité 
+                    ou votre carrière. Vous pouvez vous former en sélectionnant des modules spécifiques ou en suivant un 
+                    cours entier si vous le préférez.
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    
+    <div class="container py-5 ">
+        <div class="row">
+            <div class="col-md-3 filtre">
+                        <h4>Toutes les formations</h4>
+                        <section class="section1">
+                            <mat-checkbox>
+                                <span class="titre-section">HTML & CSS</span>
+                            </mat-checkbox>
+                            <mat-checkbox>
+                                <span class="titre-section">HTML - CSS - PHP</span>
+                            </mat-checkbox>
+                            <mat-checkbox>
+                                <span class="titre-section">HTML - CSS - PHP - JS</span>
+                            </mat-checkbox>
+                        </section>
+                        <h4>Difficultés de la formation</h4>
+                        <section>
+                            <mat-checkbox>
+                                <span class="titre-section">Débutant</span>
+                            </mat-checkbox>
+                        </section>
+                        <section>
+                            <mat-checkbox>
+                                <span class="titre-section">Intermédiaire</span>
+                            </mat-checkbox>
+                        </section>
+                        <section>
+                            <mat-checkbox>
+                                <span class="titre-section">Difficile</span>
+                            </mat-checkbox>
+                        </section>
+            </div>
+            <div class="col-md-3 mobilefiltre">
+    
+                <button class="btn" (click)="filtre()"> <svg class="toggle-filter-btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
+                    <g fill="none" fill-rule="evenodd">
+                        <path fill="#3C4043" fill-rule="nonzero" d="M7 12h4v-2H7v2zM0 0v2h18V0H0zm3 7h12V5H3v2z"></path>
+                        <path d="M-3-6h24v24H-3z"></path>
+                    </g>
+                </svg>
+                Filtre
+            </button>
+            </div>
+            <div class="col-md-9">
+                <div class="row mb-3">
+                    <div class="resultatstyle">
+                        Résultats&nbsp;: 1&nbsp;formation(s)
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-3 block" *ngFor="let item of alldata.cours">
+                        <a href="javascript:void(0);" (click)="choice()">
+                        <div class="card">
+                            <img src="{{item.image}}" class="card-img-top img" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">{{item.titre}}</h3>
+                                <hr>
+                                <p class="card-text niveauxtitre">
+                                    <img src="assets/icon/interface.png"  class="icone" alt="">
+                                    <span class="module">
+                                        <span class="modules">Module(s) :</span> <span>{{item.module}}</span>
+                                    </span>
+                                    <img src="assets/icon/wall-clock.png"   class="icone" alt="">
+                                    <span class="heure">
+                                       <span class="heures">Heure(s) :</span>  <span>{{item.heure}}</span>
+                                    </span>
+                                </p>
+                                <p class="niveaux">
+                                    <small class="text-red text-level">Niveau: <b>{{item.niveau}}</b></small>
+                                </p>
+                                <div class="row">
+                                    <i class="rien material-icons">arrow_forward</i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
