@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CoursComponent } from './pages/cours/cours.component';
 import {MaterialModule } from './material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OnecourComponent } from './pages/onecour/onecour.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LangueComponent,
     HomeComponent,
-    CoursComponent
+    CoursComponent,
+    OnecourComponent
   ],
   imports: [
     BrowserModule,

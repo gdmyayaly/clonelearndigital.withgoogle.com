@@ -13,5 +13,7 @@ export class CoursComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  choice(){
+    this.router.navigate(['one']);
+  }
 }

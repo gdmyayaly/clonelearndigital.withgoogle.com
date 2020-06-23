@@ -1,20 +1,10 @@
 <app-menu></app-menu>
 <main>
-    <div class="container">
-        <section class="jumbotron">
-            <div class="container">
-                <h1 class="jumbotron-heading">Cours en ligne</h1>
-                <p class="lead">
-                    Découvrez toute une gamme de formations gratuites conçues pour vous aider à développer votre activité 
-                    ou votre carrière. Vous pouvez vous former en sélectionnant des modules spécifiques ou en suivant un 
-                    cours entier si vous le préférez.
-                </p>
-            </div>
-        </section>
+    <div class="container-fluid blockdescription">
+        <h3>Cours en ligne</h3>
+        <p>Découvrez toute une gamme de formations gratuites conçues pour vous aider à développer votre activité ou votre carrière. Vous pouvez vous former en sélectionnant des modules spécifiques ou en suivant un cours entier si vous le préférez.</p>
     </div>
-    
-    
-    <div class="container py-5 ">
+    <div class="container-fluid blockresultat">
         <div class="row">
             <div class="col-md-3 filtre">
                         <h4>Toutes les formations</h4>
@@ -64,9 +54,9 @@
                     </div>
                 </div>
                 <div class="row" >
-                    <div class="col-md-6 col-lg-4 col-sm-12 mb-3 block" *ngFor="let item of alldata.cours">
-                        <a href="javascript:void(0);" (click)="choice()">
-                        <div class="card">
+                    <div class="col-md-6 col-lg-4 col-sm-6 col-12 mb-3 block" *ngFor="let item of alldata.cours">
+                        <!-- <a href="javascript:void(0);" > -->
+                        <div class="card card-survol" (click)="choice()">
                             <img src="{{item.image}}" class="card-img-top img" alt="...">
                             <div class="card-body">
                                 <h3 class="card-title">{{item.titre}}</h3>
@@ -89,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    <!-- </a> -->
                     </div>
                 </div>
             </div>

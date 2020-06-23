@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class AlldataService {
   public cours=[
     {id:1,image:'assets/sitevitrine.png',titre:'Création de site vitrine simple',module:'8',heure:'30',niveau:'Débutant'},
-    // {id:1,image:'assets/images/dev.png',titre:'Création de site dynamique',module:'8',heure:'30',niveau:'Intermediaire'},
-    // {id:1,image:'assets/images/dev.png',titre:'Création de micro-application',module:'8',heure:'30',niveau:'Avancée'},
+    {id:2,image:'assets/images/dev.png',titre:'Création de site dynamique',module:'8',heure:'30',niveau:'Intermediaire'},
+    {id:3,image:'assets/images/dev.png',titre:'Création de micro-application',module:'8',heure:'30',niveau:'Avancée'},
 
   ];
   public modules=[
